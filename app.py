@@ -7,6 +7,7 @@ import traceback
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
+application = app
 
 WIKI_HEADERS = {'User-Agent': 'GhasitaFinder/5.0 (music-discovery@local.app)'}
 
