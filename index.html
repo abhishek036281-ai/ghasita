@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghasita Finder | Discover Top Hits</title>
+    <meta name="description" content="Find the best song of your favorite singer instantly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <main class="container">
+        <header>
+            <h1>Ghasita<span class="highlight">Finder</span></h1>
+            <p>Discover the absolute best song by any artist.</p>
+        </header>
+
+        <section class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-search search-icon"></i>
+                <input type="text" id="artistInput" placeholder="Enter artist name (e.g., The Weeknd)"
+                    autocomplete="off">
+                <button id="searchBtn">Find Best Song</button>
+            </div>
+        </section>
+
+        <!-- Skeleton Loader -->
+        <section id="skeletonContainer" class="hidden">
+            <div class="skeleton-card">
+                <div class="skeleton-art"></div>
+                <div class="skeleton-info">
+                    <div class="skeleton-line medium"></div>
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line short"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-art"></div>
+                <div class="skeleton-info">
+                    <div class="skeleton-line medium"></div>
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line short"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-art"></div>
+                <div class="skeleton-info">
+                    <div class="skeleton-line medium"></div>
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line short"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultContainer" class="result-container hidden">
+            <!-- Results will be injected here via JS -->
+        </section>
+
+        <div id="loadingTypes" class="loading hidden">
+            <div class="spinner"></div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Chatbot UI -->
+    <div id="chatBtn" class="chat-btn">
+        <i class="fa-solid fa-comments"></i>
+    </div>
+
+    <div id="chatWindow" class="chat-window hidden">
+        <div class="chat-header">
+            <h3>Singer AI</h3>
+            <i id="closeChatBtn" class="fa-solid fa-xmark"></i>
+        </div>
+        <div id="chatBody" class="chat-body">
+            <!-- Messages go here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Ask about the singer..." autocomplete="off">
+            <button id="sendMsgBtn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

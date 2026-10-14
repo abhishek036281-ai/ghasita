@@ -1,0 +1,11 @@
+# Environments & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# Other unrelated workspaces
+cafe-management/
+credibility_checker/
